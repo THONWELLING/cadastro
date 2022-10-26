@@ -2,6 +2,7 @@ package com.example.cadastro.models;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "sellers")
@@ -14,6 +15,9 @@ public class SellerEntity {
 
   @Column(name = "seller_name")
   private String sellerName;
+
+  @ManyToMany(mappedBy = "sellers")
+  private List<ClientEntity> clients;
 
   public Long getId() {
     return id;

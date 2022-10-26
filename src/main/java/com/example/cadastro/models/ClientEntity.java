@@ -2,6 +2,7 @@ package com.example.cadastro.models;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "clients")
@@ -16,6 +17,12 @@ public class ClientEntity implements Serializable {
   @Column(name = "client_name")
   private String clientName;
 
+  @ManyToMany()
+  @JoinTable( name = "clients_sellers",
+    joinColumns = @JoinColumn(name = "client_id"),
+    inverseJoinColumns = @JoinColumn(name = "seller_id")
+  )
+  private List<SellerEntity> sellers;
   public Long getId() {
     return id;
   }
