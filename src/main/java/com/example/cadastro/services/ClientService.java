@@ -9,4 +9,6 @@ public interface ClientService {
   List<ClientDto> getAll();
 
   ClientDto findById(Long id);
+
+void deleteClientById(Long id);
 }
