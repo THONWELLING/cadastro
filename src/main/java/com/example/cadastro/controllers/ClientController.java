@@ -1,27 +1,34 @@
 package com.example.cadastro.controllers;
 
+import com.example.cadastro.controllers.dto.ClientDto;
 import com.example.cadastro.models.ClientEntity;
 import com.example.cadastro.repositories.ClientRepository;
+import com.example.cadastro.services.ClientService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/clients")
+@RequestMapping("/clients")
 public class ClientController {
 
-  ClientRepository clientRepository;
-  @GetMapping("/clients")
-  public ResponseEntity<List> clientList() {
-    return clientService.getAll();
-  };
+  private final ClientService clientService;
+
+  public ClientController(ClientService clientService) {
+    this.clientService = clientService;
+  }
+
+  @PostMapping()
+  public ResponseEntity<ClientDto> create(@RequestBody ClientDto client) {
+    return new ResponseEntity<>(this.clientService.createClient(client), HttpStatus.CREATED);
+  }
+  @GetMapping()
+  public List<ClientDto> getClientList() {
+    return this.clientService.getAll();
+  }
 
 
-  @PostMapping("/clients")
-  public ResponseEntity<>
+
 }

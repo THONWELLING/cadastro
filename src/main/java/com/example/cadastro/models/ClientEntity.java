@@ -12,7 +12,7 @@ public class ClientEntity implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "client_id")
-  private Long id;
+  private Long clientId;
 
   @Column(name = "client_name")
   private String clientName;
@@ -22,13 +22,14 @@ public class ClientEntity implements Serializable {
     joinColumns = @JoinColumn(name = "client_id"),
     inverseJoinColumns = @JoinColumn(name = "seller_id")
   )
+
   private List<SellerEntity> sellers;
-  public Long getId() {
-    return id;
+  public Long getClientId() {
+    return clientId;
   }
 
-  public void setId(Long id) {
-    this.id = id;
+  public void setClientId(Long id) {
+    this.clientId = id;
   }
 
   public String getClientName() {

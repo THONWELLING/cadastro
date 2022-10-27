@@ -14,6 +14,10 @@ public class ClientDto implements Serializable {
     this.sellers = sellers;
   }
 
+  public ClientDto() {
+
+  }
+
   public Long getId() {
     return id;
   }

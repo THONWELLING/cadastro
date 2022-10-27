@@ -11,7 +11,7 @@ public class SellerEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "seller_id")
-  private Long id;
+  private Long sellerId;
 
   @Column(name = "seller_name")
   private String sellerName;
@@ -20,11 +20,11 @@ public class SellerEntity {
   private List<ClientEntity> clients;
 
   public Long getId() {
-    return id;
+    return sellerId;
   }
 
   public void setId(Long id) {
-    this.id = id;
+    this.sellerId = id;
   }
 
   public String getSellerName() {
