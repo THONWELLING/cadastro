@@ -1,8 +1,6 @@
 package com.example.cadastro.controllers;
 
 import com.example.cadastro.controllers.dto.ClientDto;
-import com.example.cadastro.models.ClientEntity;
-import com.example.cadastro.repositories.ClientRepository;
 import com.example.cadastro.services.ClientService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,8 +29,8 @@ public class ClientController {
 
 
   @DeleteMapping("/{id}")
-  public void deleteClientById(@PathVariable Long id) {
-    this.clientService.deleteClientById(id);
+  public void deleteClientById(@RequestParam Long clientId) {
+    this.clientService.deleteClientById(clientId);
   }
 
 }

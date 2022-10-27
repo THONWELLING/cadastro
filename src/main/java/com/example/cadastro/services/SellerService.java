@@ -12,4 +12,6 @@ public interface SellerService {
   List<SellerDto> getAll();
 
   SellerDto findById(Long id);
+
+  void deleteSellerById(Long sellerId);
 }

@@ -10,5 +10,5 @@ public interface ClientService {
 
   ClientDto findById(Long id);
 
-void deleteClientById(Long id);
+void deleteClientById(Long clientId);
 }

@@ -65,4 +65,10 @@ public class SellerServiceImpl implements SellerService {
     }
   }
 
+  @Override
+  public void deleteSellerById(Long sellerId) {
+    if(this.sellerRepository.existsById(sellerId)) {
+      this.sellerRepository.deleteById(sellerId);
+    }
+  }
 }

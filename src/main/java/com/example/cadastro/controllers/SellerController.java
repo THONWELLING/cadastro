@@ -28,4 +28,8 @@ public class SellerController {
     return this.sellerService.getAll();
   }
 
+  @DeleteMapping("/{id}")
+  public void deleteSellerById(@RequestParam Long sellerId) {
+    this.sellerService.deleteSellerById(sellerId);
+  }
 }
