@@ -57,8 +57,23 @@ No Terminal/Console:
     <li>Abra a classe no Intellij e execute clicando no botão RUN</li>
 	<li>Com a aplicação "de pé", Abra o seu postman ou insomnia</li>
 </ol>
-
-
+                   <h3 align="center">Rotas de Client </h3>
+<ol>
+<li> A url base é<code>http://localhost:8080</code></li>
+<li>Rota para criar clientes =><code>http://localhost:8080/clients</code>
+utilizando o método <code>POST</code>
+<code>Content-Type application/json</code></li>
+<li>A rota para Listar os Clientes é => <code>http://localhost:8080/clients</code> utilizando o método <code>GET</code></li>
+<li>A rota para Deletar os Clientes é => <code>http://localhost:8080/clients/id</code> utilizando o método <code>DELETE</code><br>
+utilizando o <code>Form Url Encoded</code> e passando o parâmetro ==> <code>clientId</code> com o valor do ID que deseja deletar</li><br><br>
+<h3 align="center">Rotas de Vendedores </h3><br>
+<li>Rota para criar Vendedores é =><code>http://localhost:8080/sellers</code>
+utilizando o método <code>POST</code>
+<code>Content-Type application/json</code></li>
+<li>A rota para Listar  Vendedores é => <code>http://localhost:8080/sellers</code> utilizando o método <code>GET</code></li>
+<li>A rota para Deletar  Vendedores é => <code>http://localhost:8080/sellers/id</code> utilizando o método <code>DELETE</code><br>
+utilizando o <code>Form Url Encoded</code> e passando o parâmetro ==> <code>sellerId</code> com o valor do ID que deseja deletar</li>
+</ol>
 <h3>Tecnologias Utilizadas</h3>
 
 <table>
@@ -94,7 +109,7 @@ No Terminal/Console:
 
 Feito com ❤️ por Thonwelling 👋🏽 Entre em contato!
 
-[![Linkedin Badge](https://img.shields.io/badge/-Camila-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/wellington-sousa-6494a6179/)](https://www.linkedin.com/in/wellington-sousa-6494a6179/)
+[![Linkedin Badge](https://img.shields.io/badge/-Thonwelling-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/wellington-sousa-6494a6179/)](https://www.linkedin.com/in/wellington-sousa-6494a6179/)
 
 <hr>
 <h3>Contribuindo</h3>
