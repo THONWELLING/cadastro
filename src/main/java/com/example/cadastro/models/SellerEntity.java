@@ -19,11 +19,21 @@ public class SellerEntity {
   @ManyToMany(mappedBy = "sellers")
   private List<ClientEntity> clients;
 
-  public Long getId() {
+  public SellerEntity(Long sellerId, String sellerName, List<ClientEntity> clients) {
+    this.sellerId = sellerId;
+    this.sellerName = sellerName;
+    this.clients = clients;
+  }
+
+  public SellerEntity() {
+
+  }
+
+  public Long getSellerId() {
     return sellerId;
   }
 
-  public void setId(Long id) {
+  public void setSellerId(Long id) {
     this.sellerId = id;
   }
 

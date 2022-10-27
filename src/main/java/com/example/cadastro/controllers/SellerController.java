@@ -1,8 +1,8 @@
 package com.example.cadastro.controllers;
 
-import com.example.cadastro.controllers.dto.ClientDto;
+
 import com.example.cadastro.controllers.dto.SellerDto;
-import com.example.cadastro.services.ClientService;
+import com.example.cadastro.services.SellerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,19 +13,19 @@ import java.util.List;
 @RequestMapping("/sellers")
 public class SellerController {
 
-//  private final ClientService clientService;
+  private final SellerService sellerService;
 
-//  public ClientController(ClientService clientService) {
-//    this.clientService = clientService;
-//  }
+  public SellerController(SellerService sellerService) {
+    this.sellerService = sellerService;
+  }
 
-//  @PostMapping()
-//  public ResponseEntity<SellerDto> create(@RequestBody SellerDto seller) {
-//    return new ResponseEntity<>(this.sellerService.createSeller(seller), HttpStatus.CREATED);
-//  }
-//  @GetMapping()
-//  public List<SellerDto> getClientList() {
-//    return this.sellerService.getAll();
-//  }
+  @PostMapping()
+  public ResponseEntity<SellerDto> create(@RequestBody SellerDto seller) {
+    return new ResponseEntity<>(this.sellerService.createSeller(seller), HttpStatus.CREATED);
+  }
+  @GetMapping()
+  public List<SellerDto> getsellerList() {
+    return this.sellerService.getAll();
+  }
 
 }

@@ -4,22 +4,26 @@ import java.io.Serializable;
 import java.util.List;
 
 public class SellerDto implements Serializable {
-  private Long id;
+  private Long sellerId;
   private String sellerName;
   private List<ClientDto> clients;
 
   public SellerDto(Long id, String sellerName, List<ClientDto> clients) {
-    this.id = id;
+    this.sellerId = id;
     this.sellerName = sellerName;
     this.clients = clients;
   }
 
-  public Long getId() {
-    return id;
+  public SellerDto() {
+
   }
 
-  public void setId(Long id) {
-    this.id = id;
+  public Long getSellerId() {
+    return sellerId;
+  }
+
+  public void setSellerId(Long id) {
+    this.sellerId = id;
   }
 
   public String getSellerName() {
